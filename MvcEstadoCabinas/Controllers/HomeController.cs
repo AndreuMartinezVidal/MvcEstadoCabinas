@@ -35,8 +35,8 @@ namespace MvcEstadoCabinas.Controllers
                                       //PlanificacionEstadoId = estado == null ? null : estado.PlanificacionEstadoId as int?,
                                       //PlanificacionEstadoTipoId = estado == null ? null : estado.PlanificacionEstadoTipoId as PlanificacionEstadoTipoEnum?,
                                   };
-
-            return View(planificaciones.ToList());
+            var result = await planificaciones.ToListAsync();
+            return View(result);
         }
         
 
