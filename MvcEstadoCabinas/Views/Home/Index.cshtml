@@ -1,0 +1,88 @@
+﻿@model IEnumerable<MvcPlanificacionCabinas.Models.PlanificacionCabinasViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Prioridad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tubo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.recurso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.des_subseccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.material_cod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_inicio_Programada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comentarios)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prioridad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tubo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.recurso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.des_subseccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.material_cod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fecha_inicio_Programada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comentarios)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Order_cod }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Order_cod }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Order_cod })
+            </td>
+        </tr>
+    }
+
+</table>
