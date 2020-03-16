@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MvcPlanificacionCabinas.Models.PlanificacionCabinasViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Planificación";
 }
 
 <h2>Index</h2>
@@ -78,9 +78,7 @@
                 @Html.DisplayFor(modelItem => item.Comentarios)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Order_cod }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Order_cod }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Order_cod })
+                @Html.ActionLink("Editar", "Edit", new { id = item.Order_cod }) 
             </td>
         </tr>
     }
