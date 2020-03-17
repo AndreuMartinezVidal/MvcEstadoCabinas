@@ -27,29 +27,17 @@ namespace MvcPlanificacionCabinas.Models
     }
     public class PlanificacionEstadoTipo
     {
-        private PlanificacionEstadoTipo(PlanificacionEstadoTipoEnum @enum)
-        {
-            PlanificacionEstadoTipoId = (int)@enum;
-            Description = @enum.GetEnumDescription();
-            Name = @enum.ToString();
-        }
-
         protected PlanificacionEstadoTipo() { } //For EF
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PlanificacionEstadoTipoId { get; set; }
-        public int Valor { get; set; }
+        
+        public int? Valor { get; set; }
 
         [Required, MaxLength(100)]
         public string Name { get; set; }
 
-        [MaxLength(100), NotMapped]
-        public string Description { get; } 
-
-        public static implicit operator PlanificacionEstadoTipo(PlanificacionEstadoTipoEnum @enum)
-            => new PlanificacionEstadoTipo(@enum);
-
-        public static implicit operator PlanificacionEstadoTipoEnum(PlanificacionEstadoTipo PlanificacionEstadoTipo)
-            => (PlanificacionEstadoTipoEnum)PlanificacionEstadoTipo.PlanificacionEstadoTipoId;
+        [Required, MaxLength(100)]
+        public string Description { get; set; }
     }
 }

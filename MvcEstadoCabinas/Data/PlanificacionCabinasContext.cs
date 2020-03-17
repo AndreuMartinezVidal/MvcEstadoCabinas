@@ -14,6 +14,7 @@ namespace MvcPlanificacionCabinas.Data
 
         public DbSet<PlanificacionCabina> Planificaciones { get; set; }
         public DbSet<PlanificacionEstado> PlanificacionEstados { get; set; }
+        public DbSet<PlanificacionEstadoTipo> PlanificacionEstadoTipos { get; set; }
         public DbSet<PlanificacionHistorico> PlanificacionHistoricos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

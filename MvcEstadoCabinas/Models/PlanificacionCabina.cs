@@ -4,7 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MvcPlanificacionCabinas.Models
 {
-    [Table("Planificacion_Cabinas")]
+    [Table("PlanificacionCabinas")]
+    //[NotMapped]
     public class PlanificacionCabina
     {
         public string Tubo { get; set; }

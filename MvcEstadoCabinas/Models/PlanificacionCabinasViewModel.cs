@@ -7,6 +7,23 @@ namespace MvcPlanificacionCabinas.Models
     [NotMapped]
     public class PlanificacionCabinasViewModel
     {
+        public static PlanificacionCabinasViewModel Create(PlanificacionCabina planificacion, PlanificacionEstado estado)
+        {
+            return new PlanificacionCabinasViewModel
+            {
+                Prioridad = estado.Prioridad,
+                Tubo = planificacion.Tubo,
+                recurso = planificacion.recurso,
+                des_subseccion = planificacion.des_subseccion,
+                Order_cod = planificacion.Order_cod,
+                material_cod = planificacion.material_cod,
+                descart = planificacion.descart,
+                Lote = planificacion.Lote,
+                fecha_inicio_Programada = planificacion.fecha_inicio_Programada,
+                //PlanificacionEstadoId = estado == null ? null : estado.PlanificacionEstadoId as int?,
+                //PlanificacionEstadoTipoId = estado == null ? null : estado.PlanificacionEstadoTipoId as PlanificacionEstadoTipoEnum?,
+            };
+        }
         public string Tubo { get; set; }
 
         [Display(Name = "Recurso")]
@@ -31,8 +48,8 @@ namespace MvcPlanificacionCabinas.Models
         [Display(Name = "Fecha"),DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime fecha_inicio_Programada { get; set; } 
         public int? PlanificacionEstadoId { get; set; }
-        public PlanificacionEstadoTipoEnum? PlanificacionEstadoTipoId { get; set; } = PlanificacionEstadoTipoEnum.Pendiente;
-        public string Estado => PlanificacionEstadoTipoId?.GetEnumDescription();
+        public int? PlanificacionEstadoTipoId { get; set; } = (int)PlanificacionEstadoTipoEnum.Pendiente;
+        public string Estado { get; set; }// => PlanificacionEstadoTipoId?.GetEnumDescription();
         public string Comentarios { get; set; }
         public string UsuarioModificacion { get; set; }
         public DateTime? FechaModificacion { get; set; }

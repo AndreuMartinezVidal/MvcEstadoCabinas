@@ -24,6 +24,9 @@
             @Html.DisplayNameFor(model => model.des_subseccion)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Order_cod)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.material_cod)
         </th>
         <th>
@@ -46,41 +49,44 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Prioridad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tubo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.recurso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.des_subseccion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.material_cod)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.descart)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lote)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.fecha_inicio_Programada)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comentarios)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.Order_cod }) 
-            </td>
-        </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Prioridad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Tubo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.recurso)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.des_subseccion)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Order_cod)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.material_cod)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.descart)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Lote)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fecha_inicio_Programada)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Estado)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Comentarios)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.Order_cod })
+    </td>
+</tr>
     }
 
 </table>

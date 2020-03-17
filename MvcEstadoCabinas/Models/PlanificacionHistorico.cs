@@ -11,10 +11,8 @@ namespace MvcPlanificacionCabinas.Models
         public int PlanificacionHistoricoId { get; set; }
 
         [Required]
-        public PlanificacionEstadoTipoEnum PlanificacionEstadoTipoId { get; set; } = PlanificacionEstadoTipoEnum.Pendiente;
+        public int PlanificacionEstadoTipoId { get; set; } = (int)PlanificacionEstadoTipoEnum.Pendiente;
 
-        [NotMapped]
-        public string Estado => PlanificacionEstadoTipoId.GetEnumDescription();
 
         [Required, DisplayName("OF")]
         public string Order_cod { get; set; }
@@ -28,5 +26,6 @@ namespace MvcPlanificacionCabinas.Models
         [Required, DisplayName("Modificado"), DataType(DataType.DateTime)]
         public DateTime FechaModificacion { get; set; } = DateTime.Now;
 
+        public PlanificacionEstadoTipo PlanificacionEstadoTipo { get; set; }
     }
 }

@@ -129,20 +129,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\PlanificacionCabinasContext.cs" />
-    <Compile Include="Migrations\202003161104278_Initial.cs" />
-    <Compile Include="Migrations\202003161104278_Initial.designer.cs">
-      <DependentUpon>202003161104278_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003161154443_Prioridad-Nullable.cs" />
-    <Compile Include="Migrations\202003161154443_Prioridad-Nullable.designer.cs">
-      <DependentUpon>202003161154443_Prioridad-Nullable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003161243252_int-string.cs" />
-    <Compile Include="Migrations\202003161243252_int-string.designer.cs">
-      <DependentUpon>202003161243252_int-string.cs</DependentUpon>
+    <Compile Include="Migrations\202003170741500_Initial.cs" />
+    <Compile Include="Migrations\202003170741500_Initial.designer.cs">
+      <DependentUpon>202003170741500_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Extensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -207,14 +198,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003161104278_Initial.resx">
-      <DependentUpon>202003161104278_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003161154443_Prioridad-Nullable.resx">
-      <DependentUpon>202003161154443_Prioridad-Nullable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003161243252_int-string.resx">
-      <DependentUpon>202003161243252_int-string.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003170741500_Initial.resx">
+      <DependentUpon>202003170741500_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

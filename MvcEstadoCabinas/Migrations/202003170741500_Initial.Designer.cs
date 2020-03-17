@@ -13,7 +13,7 @@ namespace MvcPlanificacionCabinas.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202003161104278_Initial"; }
+            get { return "202003170741500_Initial"; }
         }
         
         string IMigrationMetadata.Source
